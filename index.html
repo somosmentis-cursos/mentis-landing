@@ -253,6 +253,37 @@ section{position:relative}
 .cat-row{align-items:flex-start}
 .cat-row .cat-mark{margin-top:8px}
 
+/* FORMACIONES CHIPS */
+.formaciones-sub{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-top:16px;margin-bottom:8px;display:block}
+.formaciones-lead{color:var(--gray);font-size:14px;margin-bottom:40px}
+.chips-wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.chip{
+  border:1px solid rgba(212,168,67,0.3);
+  background:var(--dark2);
+  color:var(--white);
+  font-family:'Inter',sans-serif;
+  font-size:14px;font-weight:400;
+  padding:12px 22px;
+  border-radius:2px;
+  white-space:nowrap;
+  transition:border-color 0.2s,background 0.2s;
+}
+.chip:hover{border-color:var(--gold);background:var(--dark3)}
+@media(max-width:600px){
+  .chip{white-space:normal;text-align:center;padding:11px 18px;font-size:13px}
+}
+
+/* CTA TERCIARIO (whatsapp discreto) */
+.cta-tertiary-wrap{padding:56px 0;text-align:center}
+.cta-tertiary-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gray2);margin-bottom:14px}
+.btn-tertiary{
+  display:inline-block;color:var(--gray);
+  font-size:12px;letter-spacing:1px;
+  text-decoration:none;border-bottom:1px solid rgba(212,168,67,0.25);
+  padding-bottom:2px;transition:color 0.2s,border-color 0.2s;
+}
+.btn-tertiary:hover{color:var(--gold);border-color:var(--gold)}
+
 .dual-cta{
   padding:80px 0;text-align:center;
   background:var(--dark);
@@ -609,7 +640,7 @@ footer{
       </div>
 
       <div class="reveal" style="text-align:center;margin-top:56px">
-        <a href="#formaciones" class="btn-outline">Ver las formaciones</a>
+        <a href="#formaciones" class="btn-outline">Descubrir las formaciones</a>
       </div>
     </div>
   </div>
@@ -645,34 +676,40 @@ footer{
   </div>
 </section>
 
+<!-- CTA INTERMEDIO WHATSAPP -->
+<div class="cta-tertiary-wrap reveal">
+  <div class="cta-tertiary-label">¿Quieres seguir descubriendo MENTIS?</div>
+  <a href="https://whatsapp.com/channel/0029VbD7wR2JUM2duXsGpK43" class="btn-tertiary" target="_blank">Seguir novedades en WhatsApp</a>
+</div>
+
 <!-- CATEGORIAS -->
 <section id="formaciones">
   <div class="cats-wrap">
     <div class="section-inner">
-      <div class="cats-header reveal">
-        <div>
-          <span class="section-eyebrow">¿Qué quieres aprender ahora?</span>
-          <h2 class="section-title">Formación para<br><em>cada área de tu vida</em></h2>
-        </div>
-        <p>Explora las formaciones disponibles y descubre cuál despierta tu curiosidad. Profesores de diferentes disciplinas, nuevas formaciones cada mes.</p>
+      <div class="reveal" style="text-align:center">
+        <h2 class="section-title">¿Qué quieres<br><em>aprender ahora?</em></h2>
+        <span class="formaciones-sub">Formaciones confirmadas en MENTIS</span>
+        <p class="formaciones-lead">Algunas ya están disponibles y otras se irán incorporando próximamente.</p>
       </div>
-      <div class="cats-list reveal">
-        <div class="cat-row">
-          <span class="cat-mark"></span>
-          <div>
-            <span class="cat-title">CONSTELACIONES Y TRABAJO SISTEMICO</span>
-            <span class="cat-sub">Terapia Sistémica con Muñecos Playmobil</span>
-          </div>
-        </div>
-        <div class="cat-row">
-          <span class="cat-mark"></span>
-          <div>
-            <span class="cat-title">ESPIRITUALIDAD Y HERRAMIENTAS ENERGETICAS</span>
-            <span class="cat-sub">3 formaciones disponibles</span>
-          </div>
-        </div>
+      <div class="chips-wrap reveal">
+        <span class="chip">Terapia Sistémica con Muñecos Playmobil</span>
+        <span class="chip">Péndulo Hebreo</span>
+        <span class="chip">Tarot</span>
+        <span class="chip">Oráculo Lenormand</span>
+        <span class="chip">Bola de Cristal</span>
+        <span class="chip">Mediumnidad</span>
+        <span class="chip">Reiki</span>
+        <span class="chip">Registros Akáshicos</span>
+        <span class="chip">Diseño Humano</span>
+        <span class="chip">Hipnosis</span>
+        <span class="chip">Grafología</span>
+        <span class="chip">Astrología</span>
+        <span class="chip">Numerología Holística</span>
+        <span class="chip">Gestión de Redes Sociales</span>
+        <span class="chip">Eneagrama</span>
+        <span class="chip">Counseling</span>
+        <span class="chip">Terapia Gestalt Transpersonal</span>
       </div>
-      <p class="reveal" style="text-align:center;margin-top:32px;color:var(--gray2);font-size:13px;font-style:italic">Seguimos incorporando nuevas formaciones cada mes.</p>
     </div>
   </div>
 </section>
