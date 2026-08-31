@@ -121,13 +121,16 @@ color:var(--ink);
 }
 
 .cards2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
-@media(max-width:700px){.cards2{grid-template-columns:1fr}}
+.cards3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:30px}
+@media(max-width:700px){.cards2{grid-template-columns:1fr}.cards3{grid-template-columns:1fr}}
 .card{border-radius:16px;padding:24px 26px;border:1.5px solid}
 .card.pink{background:var(--pink-bg);border-color:var(--pink-border)}
 .card.purple{background:var(--purple-bg);border-color:var(--purple-border)}
 .card.blue{background:var(--blue-bg);border-color:var(--blue-border)}
 .card h3{color:var(--ink);font-family:'Playfair Display',serif}
-.card p{color:#4a4a4a}
+.card p{color:#4a4a4a;margin:0}
+.card ul{margin:10px 0 0 18px;color:#4a4a4a;font-size:.95rem}
+.card li{margin-bottom:4px}
 
 .pull-quote{
 border-left:3px solid var(--purple-border);
@@ -163,7 +166,6 @@ text-align:center;
 }
 @media(max-width:700px){.form-section{padding:26px}}
 .form-section h2{margin-bottom:8px}
-.form-wrap{margin-top:0;text-align:left}
 
 .price-line{
 font-family:'Playfair Display',serif;
@@ -173,6 +175,24 @@ color:var(--ink);
 margin:6px 0 4px;
 }
 .price-line small{font-size:1.1rem;font-weight:500;color:var(--gray)}
+
+.for-who-list{list-style:none;max-width:600px;margin:24px auto 0;text-align:left}
+.for-who-list li{
+padding:12px 0 12px 32px;
+position:relative;
+color:var(--ink);
+font-size:1.02rem;
+border-bottom:1px solid rgba(62,101,119,.1);
+}
+.for-who-list li:last-child{border-bottom:none}
+.for-who-list li::before{
+content:'✓';
+position:absolute;left:0;top:12px;
+color:var(--teal);
+font-weight:700;
+}
+
+.data-list{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px}
 
 footer{text-align:center;padding:44px 24px 60px;color:var(--gray);font-size:.85rem}
 footer .wa{margin-bottom:18px}
@@ -186,49 +206,141 @@ footer .wa{margin-bottom:18px}
 </div>
 </header>
 
+<!-- 1. HERO -->
 <section class="hero">
 <div class="wrap">
-<h1>Taller en directo · con Fátima Domingo</h1>
+<span class="eyebrow">Taller en directo</span>
+<h1>Taller de Tarot en directo<br>con Fátima Domingo</h1>
+<p class="lead">Aprende a interpretar 3 cartas juntas y a construir una lectura con sentido.</p>
 
 <div class="info-pills">
-<span class="pill">📅 12 de septiembre · 18:00h</span>
-<span class="pill">💶 37€</span>
+<span class="pill">📅 12 de septiembre</span>
+<span class="pill">🕕 18:00 h</span>
+<span class="pill">⏱ 1h30</span>
+<span class="pill">💻 En directo por Zoom</span>
+<span class="pill">💶 37 €</span>
 <span class="pill">🔴 Plazas limitadas</span>
 </div>
 
-<p class="lead">Es en directo, pero si no puedes llegar, no pasa nada: se graba y te la enviamos.</p>
-
-<a href="#reserva" class="btn btn-teal">Reservar mi plaza →</a>
+<a href="https://whop.com/checkout/plan_8N5ZaCapdBEPr" class="btn btn-teal" target="_blank" rel="noopener" onclick="mentisTrackCheckout()">Reservar mi plaza →</a>
 </div>
 </section>
 
+<!-- 2. PROBLEMA / IDENTIFICACIÓN -->
+<section>
+<div class="wrap">
+<p class="pull-quote">¿Has empezado a aprender Tarot pero cuando tienes varias cartas delante no sabes cómo relacionarlas?</p>
+<p class="pull-quote">Una cosa es conocer el significado de una carta y otra muy distinta saber construir una lectura con varias cartas.</p>
+<p style="margin-top:24px;max-width:640px">Una experiencia práctica de 1h30 para empezar a leer las cartas relacionándolas entre sí, no simplemente memorizando significados.</p>
+</div>
+</section>
+
+<!-- 3. QUÉ VAS A APRENDER -->
+<section>
+<div class="wrap">
+<span class="eyebrow">Qué vas a aprender</span>
+<h2 style="text-align:center">En 1h30 vas a aprender a construir una lectura de 3 cartas</h2>
+<div class="cards3">
+<div class="card pink">
+<h3>① Aprende las cartas</h3>
+<p>El Loco, 2 de Oros y 3 de Bastos. Trabajaremos su significado, simbolismo y aplicación práctica.</p>
+<ul>
+<li>Comienzos, espontaneidad, fe, libertad, riesgo consciente</li>
+<li>Simbolismo y significado al derecho e invertido</li>
+<li>Bastos: fuego, acción, pasión, iniciativa, creatividad</li>
+<li>Oros: tierra, dinero, trabajo, cuerpo, estabilidad</li>
+<li>Ejemplo práctico</li>
+</ul>
+</div>
+<div class="card purple">
+<h3>② Aprende a relacionarlas</h3>
+<p>Cómo dejar de interpretar cada carta de forma aislada y empezar a construir una narrativa con sentido entre varias cartas.</p>
+</div>
+<div class="card blue">
+<h3>③ Haz tu propia tirada</h3>
+<p>Practicarás en directo con El Loco, el 2 de Oros y el 3 de Bastos, siguiendo la estructura:</p>
+<p style="margin-top:8px;font-weight:600;color:var(--ink)">Pasado → Presente → Futuro</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4. CÓMO SERÁ EL TALLER -->
+<section>
+<div class="wrap">
+<span class="eyebrow">Cómo será el taller</span>
+<h2 style="text-align:center">1h30 en directo, con práctica guiada</h2>
+<div class="teacher-section" style="margin-top:36px">
+<div class="teacher-photo">
+<img src="fatima-domingo.png" alt="Fátima Domingo">
+</div>
+<div>
+<p>Una sesión en directo por Zoom con Fátima Domingo, instructora de Tarot en MENTIS. Además de explicar cada carta, practicaréis juntas una tirada sencilla con El Loco, el 2 de Oros y el 3 de Bastos, construyendo la narrativa en directo.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 5. MINI GUÍA (entregable) -->
+<section>
+<div class="wrap">
+<div class="card purple" style="max-width:640px;margin:0 auto">
+<span class="tag-pill">Entregable incluido</span>
+<h3>Y además, te llevas la Mini Guía del Taller</h3>
+<p>Una guía de referencia para que puedas volver a consultar las tres cartas trabajadas y practicar tu propia tirada después del taller.</p>
+<p style="margin-top:10px">La tendrás como material de apoyo para seguir practicando después del taller.</p>
+</div>
+</div>
+</section>
+
+<!-- 6. PARA QUIÉN ES -->
+<section>
+<div class="wrap">
+<span class="eyebrow" style="display:block;text-align:center">Para quién es</span>
+<h2 style="text-align:center">Este taller es para ti si...</h2>
+<ul class="for-who-list">
+<li>Estás empezando con el Tarot</li>
+<li>Conoces cartas sueltas pero quieres aprender a relacionarlas</li>
+<li>Quieres practicar una tirada sencilla</li>
+<li>Quieres aprender de forma práctica y en directo</li>
+</ul>
+</div>
+</section>
+
+<!-- 7. DATOS DEL TALLER -->
+<section>
+<div class="wrap">
+<h2 style="text-align:center">Datos del taller</h2>
+<div class="data-list">
+<span class="pill">📅 12 de septiembre</span>
+<span class="pill">🕕 18:00 h</span>
+<span class="pill">⏱ 1h30</span>
+<span class="pill">💻 Zoom</span>
+<span class="pill">💶 37 €</span>
+<span class="pill">🔴 Plazas limitadas</span>
+</div>
+</div>
+</section>
+
+<!-- 8. CTA FINAL -->
 <section id="reserva">
 <div class="wrap">
 <div class="form-section">
-<div class="form-wrap">
-<iframe data-tally-src="https://tally.so/embed/RGegZ4?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" loading="lazy" width="100%" height="260" frameborder="0" marginheight="0" marginwidth="0" title="MENTIS · Tarot · Reserva tu plaza"></iframe>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s)}</script>
-<!-- Al completar el formulario Tally, disparamos InitiateCheckout hacia Meta (evento de conversion de esta campana de Ventas) -->
-<script>
-window.addEventListener('message', function(e){
-  try {
-    var data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
-    if (data && data.event === 'Tally.FormSubmitted') {
-      if (typeof fbq === 'function') { fbq('track', 'InitiateCheckout'); }
-      if (typeof whop !== 'undefined' && whop.track) { whop.track('lead'); }
-    }
-  } catch(err) {}
-});
-</script>
-</div>
+<h2>Reserva tu plaza para el taller</h2>
+<div class="price-line">37 € <small>· plazas limitadas</small></div>
+<a href="https://whop.com/checkout/plan_8N5ZaCapdBEPr" class="btn btn-teal" target="_blank" rel="noopener" onclick="mentisTrackCheckout()">Reservar mi plaza →</a>
 </div>
 </div>
 </section>
 
+<script>
+function mentisTrackCheckout(){
+try { if (typeof fbq === 'function') { fbq('track', 'InitiateCheckout'); } } catch(err) {}
+try { if (typeof whop !== 'undefined' && whop.track) { whop.track('lead'); } } catch(err) {}
+}
+</script>
+
 <footer>
-<div class="wa">
-<a href="https://whatsapp.com/channel/0029VbD7wR2JUM2duXsGpK43" class="btn" style="background:transparent;color:var(--heading);border:1.5px solid var(--heading)" target="_blank">Seguir MENTIS en WhatsApp</a>
-</div>
 <p>Fátima Domingo · Taller de Tarot, dentro de MENTIS. Enfoque de aprendizaje y práctica — no sustituye el consejo médico, psicológico, legal o financiero de un profesional.</p>
 </footer>
 
