@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENTIS · 9 pasos para comprar una formación sin arrepentirte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0F0D0A;
+    --paper:#FAF8F4;
+          --gold:#C9A24B;
+          --gold-soft:#E4CE99;
+          --line: rgba(250,248,244,0.14);
+    --line-dark: rgba(15,13,10,0.12);
+}
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+        background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+}
+  h1,h2,h3{
+        font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    line-height:1.12;
+    letter-spacing:-0.01em;
+}
+  a{color:inherit;}
+  .wrap{
+    max-width:640px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  .hero{
+        background:var(--ink);
+    color:var(--paper);
+    padding:96px 0 84px;
+}
+  .hero .wrap{max-width:600px;}
+  .hero .mark{
+    font-family:'Cormorant Garamond', serif;
+    font-size:15px;
+    letter-spacing:0.16em;
+    color:var(--gold-soft);
+    margin-bottom:40px;
+  }
+  .hero h1{
+        font-size:44px;
+    color:var(--paper);
+    margin-bottom:22px;
+    max-width:480px;
+}
+  .hero h1 em{
+        font-style:italic;
+    color:var(--gold-soft);
+}
+  .hero .sub{
+    font-size:17px;
+    color:rgba(250,248,244,0.72);
+    max-width:400px;
+    margin-bottom:40px;
+  }
+  .btn{
+        display:inline-block;
+    background:var(--gold);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:15px;
+    padding:15px 30px;
+    text-decoration:none;
+    border:1px solid var(--gold);
+    transition:background .18s ease, color .18s ease;
+  }
+  .btn:hover{background:transparent; color:var(--gold);}
+  .btn-dark{
+        background:var(--ink);
+    color:var(--paper);
+    border:1px solid var(--ink);
+}
+  .btn-dark:hover{background:transparent; color:var(--ink);}
+  .section{
+        padding:72px 0;
+    border-bottom:1px solid var(--line-dark);
+  }
+  .eyebrow{
+    font-size:13px;
+    color:#8A7E68;
+    margin-bottom:14px;
+}
+  .section h2{
+        font-size:30px;
+        color:var(--ink);
+    max-width:460px;
+    margin-bottom:30px;
+}
+  .steps{
+        list-style:none;
+    counter-reset: step;
+}
+    .steps li{
+          counter-increment: step;
+    display:flex;
+        gap:20px;
+    padding:20px 0;
+    border-top:1px solid var(--line-dark);
+        align-items:baseline;
+    }
+  .steps li:last-child{border-bottom:1px solid var(--line-dark);}
+      .steps li::before{
+            content: counter(step, decimal-leading-zero);
+    font-family:'Cormorant Garamond', serif;
+          font-size:22px;
+    color:var(--gold);
+    flex:0 0 34px;
+}
+  .steps li p{font-size:16px; color:#26221C;}
+  .steps li p strong{font-weight:600;}
+  .more-note{
+        margin-top:22px;
+        font-size:14.5px;
+        color:#8A7E68;
+    font-style:italic;
+    font-family:'Cormorant Garamond', serif;
+}
+  .pull{
+        padding:80px 0;
+          background:var(--paper);
+    border-bottom:1px solid var(--line-dark);
+}
+        .pull .wrap{max-width:560px;}
+      .pull p{
+        font-family:'Cormorant Garamond', serif;
+    font-size:30px;
+        line-height:1.3;
+    color:var(--ink);
+    }
+        .pull p.dim{color:#A79A7E;}
+  .paqui{
+    padding:80px 0;
+    border-bottom:1px solid var(--line-dark);
+          }
+  .paqui .inner{
+    display:flex;
+        gap:44px;
+              align-items:flex-start;
+}
+      .paqui .photo{
+    flex:0 0 180px;
+}
+      .paqui .photo img{
+    width:180px;
+    height:auto;
+    display:block;
+    filter:grayscale(15%);
+}
+  .paqui .text{flex:1;}
+      .paqui .label{
+    font-size:13px;
+        color:#8A7E68;
+    margin-bottom:10px;
+      }
+  .paqui h3{
+        font-size:24px;
+    color:var(--ink);
+    margin-bottom:14px;
+}
+  .paqui p{
+        font-size:15.5px;
+    color:#3A352C;
+    margin-bottom:14px;
+    max-width:400px;
+}
+  @media (max-width:560px){
+    .paqui .inner{flex-direction:column;}
+    .paqui .photo{flex:none;}
+    .paqui .photo img{width:140px;}
+}
+  .closing{
+        background:var(--ink);
+    color:var(--paper);
+    padding:88px 0 96px;
+    text-align:left;
+}
+  .closing h2{
+        color:var(--paper);
+    font-size:32px;
+    max-width:440px;
+    margin-bottom:18px;
+  }
+  .closing .how{
+    font-size:15.5px;
+    color:rgba(250,248,244,0.68);
+    max-width:420px;
+    margin-bottom:34px;
+  }
+  .closing .trust{
+    margin-top:22px;
+    font-size:13.5px;
+    color:rgba(250,248,244,0.5);
+  }
+  .closing .pin{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    color:var(--gold-soft);
+    margin-top:26px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  footer{
+        padding:30px 0;
+    text-align:left;
+}
+  footer .wrap{
+    font-size:12.5px;
+    color:#A79A7E;
+    }
+</style>
+  </head>
+  <body>
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="mark">MENTIS</div>
+        <h1>9 pasos para comprar una formación <em>sin arrepentirte</em></h1>
+        <p class="sub">La guía gratuita de Paqui, fundadora de MENTIS.</p>
+      <a href="https://chat.whatsapp.com/CL9ieV8LR6e9hVdHhP92YN" class="btn">Quiero mi guía gratis</a>
+    </div>
+  </section>
+
+  <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">Dentro de la guía</div>
+      <h2>Las preguntas que hay que hacerse antes de pagar cualquier formación</h2>
+        <ul class="steps">
+          <li><p><strong>El programa</strong> — ¿lo que voy a aprender coincide con lo que estoy buscando?</p></li>
+          <li><p><strong>El profesor</strong> — ¿quién me va a enseñar, y por qué debería confiar en su criterio?</p></li>
+          <li><p><strong>La modalidad</strong> — ¿grabada o en directo? Cuál encaja con cómo aprendes tú.</p></li>
+        <li><p><strong>El acompañamiento</strong> — ¿qué pasa después de pagar? ¿Puedes preguntar, hay comunidad?</p></li>
+        </ul>
+        <p class="more-note">Son 9 en total dentro de la guía — estos son los primeros.</p>
+    </div>
+  </section>
+
+  <section class="pull">
+    <div class="wrap">
+      <p>No compres la modalidad.</p>
+      <p class="dim">Compra la modalidad que necesitas.</p>
+      </div>
+    </section>
+
+    <section class="paqui">
+      <div class="wrap">
+        <div class="inner">
+          <div class="photo">
+            <img src="paqui.jpg" alt="Paqui, fundadora de MENTIS">
+          </div>
+          <div class="text">
+            <div class="label">Escrita por Paqui — Fundadora de MENTIS</div>
+          <h3>Formadora de Formadores</h3>
+          <p>Más de 15.000 € invertidos en formaciones a lo largo de los años. Algunas merecieron la pena. Otras fueron un error que no quiere que repitas.</p>
+          <p>MENTIS reúne formaciones en directo de tarot, reiki, oráculos y más — todas seleccionadas con el mismo criterio que encontrarás en esta guía.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <h2>Únete al grupo y descárgala al momento</h2>
+        <p class="how">Está fijada arriba del todo, lista para descargar en cuanto entres. Sin formularios, sin esperas.</p>
+        <a href="https://chat.whatsapp.com/CL9ieV8LR6e9hVdHhP92YN" class="btn btn-dark" style="background:var(--gold); color:var(--ink); border-color:var(--gold);">Unirme y descargar la guía</a>
+        <div class="pin">Grupo privado y moderado por Paqui — sin spam, sin ruido.</div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">MENTIS · Formación en directo, con criterio.</div>
+    </footer>
+
+  </body>
+  </html>
+  
